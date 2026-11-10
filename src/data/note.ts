@@ -91,7 +91,7 @@ export const hardware = [
     color: '#ffd43b',
     category: 'Passerelle Zigbee',
     name: 'Sonoff ZBDongle-E (clé coordinateur Zigbee)',
-    status: 'À prendre : nécessaire avec une prise Zigbee',
+    status: "Déjà en main : clés fournies par l'école",
     price: '25,40 € sur le site Sonoff (page boutique FR)',
     why: [
       'C\'est la pièce qui fait parler la prise Zigbee : une clé USB branchée sur le Raspberry Pi qui héberge déjà Mosquitto.',
@@ -110,9 +110,9 @@ export const hardware = [
     id: 'air',
     icon: '🌫️',
     color: '#ff6b6b',
-    category: 'Qualité de l\'air',
+    category: "Qualité de l'air · candidat 1",
     name: 'Moniteur de qualité de l\'air 5 en 1 UTTASU (Tuya, version Zigbee)',
-    status: 'À prendre (choisir l\'option « Zig Bee »)',
+    status: "Candidat 1 sur 3 (Zigbee, à confirmer)",
     price: 'Prix non affiché : indisponible sur Amazon.fr le 10/11/2026, à confirmer',
     why: [
       'Un seul boîtier annonce particules PM2.5, COV (TVOC), température et humidité, avec CO2 et formaldéhyde (HCHO) selon la fiche.',
@@ -129,6 +129,51 @@ export const hardware = [
     links: [
       { label: 'Amazon.fr', url: 'https://www.amazon.fr/dp/B0HGNW1J6H' },
       { label: 'Plan B : Heiman HS2AQ-EF-3.0', url: 'https://www.zigbee2mqtt.io/devices/HS2AQ-EF-3.0.html' },
+    ],
+  },
+  {
+    id: "air-oceanlend",
+    icon: "🌫️",
+    color: "#ff6b6b",
+    category: "Qualité de l'air · candidat 2",
+    name: "Oceanlend 6 en 1 (Tuya, option Zigbee)",
+    status: "Candidat 2 sur 3 (Zigbee, indisponible)",
+    price: "À partir de 43,19 € pour l'option Zigbee (41,09 € en wifi) · indisponible sur Amazon.fr le 10/11/2026",
+    why: [
+      "Annonce Zigbee avec PM2.5, CO2, température, humidité et composés organiques volatils (capteur semi-conducteur) : le plus complet des trois sur le papier.",
+      "En Zigbee, il passe par la clé déjà en main : aucun besoin du wifi de l'IUT.",
+    ],
+    watch: [
+      "Même famille d'annonces génériques Tuya : pas de précision de mesure, pas de formaldéhyde annoncé, compatibilité Zigbee2MQTT à vérifier.",
+      "Seulement 4 avis (3,4 sur 5) et indisponible : impossible à compter dessus tant qu'il n'est pas de retour.",
+      "Le texte précise une connexion à l'application Tuya via wifi : vérifie bien que c'est la variante Zigbee qui est livrée.",
+    ],
+    links: [
+      { label: "Amazon.fr", url: "https://www.amazon.fr/dp/B0DRJX1FB9" },
+    ],
+  },
+  {
+    id: "air-airguard",
+    icon: "🌫️",
+    color: "#ff6b6b",
+    category: "Qualité de l'air · candidat 3",
+    name: "Sonoff moniteur PM2.5 / PM10 (Matter, wifi)",
+    status: "Candidat 3 sur 3 (en stock, mais pas Zigbee)",
+    price: "40,24 € sur Amazon.fr le 10/11/2026 (en stock)",
+    why: [
+      "Seul des trois à être en stock et d'une marque connue : 204 avis (3,8 sur 5).",
+      "Précision annoncée : PM2.5 à ± 10 µg/m³ de 0 à 100 µg/m³, température ± 0,6 °C, humidité ± 3 % : des chiffres, contrairement aux annonces génériques.",
+      "Écran de 3,75 pouces, alarme sonore et voyant lumineux : alerte sur place sans passer par l'application.",
+      "Il mesure aussi les PM10 (poussières plus grosses), utiles pour la gravure.",
+    ],
+    watch: [
+      "Matter sur wifi, pas Zigbee : il a besoin du wifi de l'IUT, le problème à lever avant de le choisir.",
+      "Alimenté en continu (secteur) : prévoir une prise près de la laser.",
+      "Ni formaldéhyde ni COV annoncés : il couvre les particules, pas les gaz.",
+      "Paramétrage via l'application eWeLink et Matter : voir si Home Assistant ou Zigbee2MQTT peut remonter les valeurs vers MQTT.",
+    ],
+    links: [
+      { label: "Amazon.fr", url: "https://www.amazon.fr/dp/B0G2W4FVQF" },
     ],
   },
   {

@@ -84,8 +84,8 @@ const nav = [
             <a class="btn" href="#materiel">Le matériel</a>
           </p>
           <ul class="stats">
-            <li><b>100 %</b> Zigbee</li>
-            <li><b>4</b> pièces à brancher</li>
+            <li><b>Zigbee</b> en priorité</li>
+            <li><b>3</b> capteurs d'air à comparer</li>
             
           </ul>
         </div>
@@ -155,7 +155,7 @@ const nav = [
       <!-- MATÉRIEL -->
       <section id="materiel">
         <h2>Le matériel</h2>
-        <p class="intro">Quatre pièces, tout en Zigbee. Prix relevés le {hardwareDate} : vérifie-les avant de commander.</p>
+        <p class="intro">Les pièces retenues et trois candidats pour la qualité de l'air. Prix relevés le {hardwareDate} : vérifie-les avant de commander.</p>
         <div class="hw-grid">
           {hardware.map((h) => (
             <article class="hw" style={`--c:${h.color}`}>
